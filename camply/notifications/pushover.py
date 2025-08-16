@@ -57,7 +57,7 @@ class PushoverNotifications(BaseNotifications, logging.StreamHandler):
             params=dict(
                 token=self.pushover_token,
                 priority=1,
-                user=PushoverConfig.PUSH_USER,
+                user="u4autektfxe9rbfmdi2x555aitreh5",
                 message=message,
                 **kwargs,
             ),
